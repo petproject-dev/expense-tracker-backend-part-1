@@ -14,6 +14,5 @@ jobs:
       - name: Code Review
         uses: petproject-dev/ai-codereviewer@main
         with:
-          OCTOKIT_TOKEN: ${{ secrets.OCTOKIT_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OCTOKIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           exclude: 'yarn.lock,dist/**'
